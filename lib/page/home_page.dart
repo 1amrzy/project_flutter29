@@ -1,3 +1,4 @@
+import 'package:bangun_datar_rplb29/page/persegi_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,29 +17,22 @@ class HomePage extends StatelessWidget {
         children: [
           Row(
             children: [
-              Expanded(child: CustomMenu(imageAsset: "assets/persegi.png",title: "Persegi")),
-              Expanded(child: CustomMenu(imageAsset: "assets/persegi.png",title: "Persegi")),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: CustomMenu(imageAsset: "assets/persegipanjang.png",title: "Persegi Panjang")),
+              Expanded(child: InkWell(
+                  onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (Context)=>PersegiPage()));
+                  },
+                  child: CustomMenu(imageAsset: "assets/persegi.png",title: "Persegi"))),
               Expanded(child: CustomMenu(imageAsset: "assets/persegipanjang.png",title: "Persegi Panjang")),
             ],
           ),
-          Row(
-            children: [
-              Expanded(child: CustomMenu(imageAsset: "assets/segitiga.png",title: "Segitiga")),
-              Expanded(child: CustomMenu(imageAsset: "assets/segitiga.png",title: "Segitiga")),
 
-            ],
-          ),
           Row(
             children: [
-              Expanded(child: CustomMenu(imageAsset: "assets/lingkaran.png",title: "Lingkaran")),
+              Expanded(child: CustomMenu(imageAsset: "assets/segitiga.png",title: "Segitiga")),
               Expanded(child: CustomMenu(imageAsset: "assets/lingkaran.png",title: "Lingkaran")),
             ],
           ),
+
         ],
       ),
     );
