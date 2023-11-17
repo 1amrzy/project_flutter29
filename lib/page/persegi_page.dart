@@ -15,7 +15,11 @@ final PersegiController _persegiController= Get.put(PersegiController());
           Text("Persegi",style: TextStyle(
               color: Colors.white),
           ),
-          Padding(
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.amberAccent.shade200,borderRadius: BorderRadius.all(Radius.circular(12))
+            ),
+            margin: const EdgeInsets.all(8.0),
             padding: const EdgeInsets.all(8.0),
             child: Text("Persegi atau bujur sangkar adalah bangun datar dua dimensi yang dibentuk oleh empat "
                 "buah rusuk yang sama panjang dan memiliki empat buah sudut yang kesemuanya adalah sudut "
